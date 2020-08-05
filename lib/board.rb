@@ -4,11 +4,10 @@ class Board
 
   def initialize
     @cells = [" ", " ", " ", " ", " ", " ", " ", " ", " "]
- 
   end
 
-  def reset!  #resets cells of the board to a 9 element array of " "
-    @cells.replace([" ", " ", " ", " ", " ", " ", " ", " ", " "]) #refactorMe
+  def reset!  
+    @cells.replace([" ", " ", " ", " ", " ", " ", " ", " ", " "]) 
   end
 
   def display
@@ -19,7 +18,7 @@ class Board
     puts " " + @cells[6] + " | " + @cells[7] + " | " + @cells[8] + " "
   end
 
-  def position(user_input)  # takes in user input and returns the value of the board cell
+  def position(user_input)  
     self.cells[(user_input.to_i) - 1]
   end
 
